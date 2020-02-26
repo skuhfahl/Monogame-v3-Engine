@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using UntitledMedievalGame.Engine;
 
 namespace UntitledMedievalGame
 {
@@ -9,8 +10,9 @@ namespace UntitledMedievalGame
     /// </summary>
     public class Game1 : Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        private GraphicsDeviceManager graphics;
+        private SpriteBatch spriteBatch;
+        private InputHelper inputHelper;
 
         public Game1()
         {
@@ -39,6 +41,7 @@ namespace UntitledMedievalGame
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            inputHelper = new InputHelper();
 
             // TODO: use this.Content to load your game content here
         }
@@ -59,8 +62,14 @@ namespace UntitledMedievalGame
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+            inputHelper.Update();
+
+            if (inputHelper.IsNewKeyPress(Keys.Escape)) 
+            { 
+                Exit(); 
+            }
+
+
 
             // TODO: Add your update logic here
 

@@ -53,7 +53,8 @@ namespace UntitledMedievalGame.Engine
         }
 
         public bool IsNewMouseButtonPress(MouseButtons button)
-        {   //check to see the mouse button was pressed
+        {   
+            //check to see the mouse button was pressed
             if (button == MouseButtons.LeftButton)
             {
                 return (currentMouseState.LeftButton == ButtonState.Pressed &&
@@ -71,7 +72,8 @@ namespace UntitledMedievalGame.Engine
         }
 
         public bool IsNewMouseButtonRelease(MouseButtons button)
-        {   //check to see the mouse button was released
+        {   
+            //check to see the mouse button was released
             if (button == MouseButtons.LeftButton)
             {
                 return (lastMouseState.LeftButton == ButtonState.Pressed &&
@@ -89,7 +91,8 @@ namespace UntitledMedievalGame.Engine
         }
 
         public bool IsMouseButtonDown(MouseButtons button)
-        {   //check to see if the mouse button is being held down
+        {   
+            //check to see if the mouse button is being held down
             if (button == MouseButtons.LeftButton)
             {
                 return (currentMouseState.LeftButton == ButtonState.Pressed);

@@ -8,7 +8,7 @@ namespace UntitledMedievalGame
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class Game1 : Game
+    public class Main : Game
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
@@ -16,7 +16,7 @@ namespace UntitledMedievalGame
         private Texture2D texture;
         private Vector2 texturePosition;
 
-        public Game1()
+        public Main()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";

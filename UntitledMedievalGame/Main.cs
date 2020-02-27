@@ -15,12 +15,13 @@ namespace UntitledMedievalGame
         private InputHelper inputHelper;
         private Texture2D texture;
         private Vector2 texturePosition;
+        World world;
 
         public Main()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            texturePosition = new Vector2(0, 0);
+            inputHelper = new InputHelper();
         }
 
         /// <summary>
@@ -44,10 +45,9 @@ namespace UntitledMedievalGame
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            inputHelper = new InputHelper();
-            texture = this.Content.Load<Texture2D>("PlayerPlaceholder");
 
             // TODO: use this.Content to load your game content here
+            world = new World(this.Content, spriteBatch);
         }
 
         /// <summary>
@@ -74,6 +74,7 @@ namespace UntitledMedievalGame
             }
 
             // TODO: Add your update logic here
+            world.Update();
 
             base.Update(gameTime);
         }
@@ -88,7 +89,9 @@ namespace UntitledMedievalGame
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            spriteBatch.Draw(texture, texturePosition, Color.White);
+
+            world.Draw();
+
             spriteBatch.End();
 
             base.Draw(gameTime);

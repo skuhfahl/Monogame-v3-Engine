@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using UntitledMedievalGame.Engine;
+using UntitledMedievalGame.Engine.Services;
 
 namespace UntitledMedievalGame.Engine
 {
@@ -12,6 +13,8 @@ namespace UntitledMedievalGame.Engine
     /// </summary>
     class Entity
     {
+        ContentManager contentManager = GameServices.GetService<ContentManager>();
+
         private Vector2 position;
         private Vector2 dimensions;
         private Texture2D texture;
@@ -19,9 +22,9 @@ namespace UntitledMedievalGame.Engine
         private SpriteBatch spriteBatch;
         private SpriteEffects spriteEffects;
 
-        public Entity(ContentManager content, SpriteBatch spriteBatch, string texturePath, Vector2 position, Vector2 dimensions)
+        public Entity(SpriteBatch spriteBatch, string texturePath, Vector2 position, Vector2 dimensions)
         {
-            this.texture = content.Load<Texture2D>(texturePath);
+            this.texture = contentManager.Load<Texture2D>(texturePath);
             this.position = position;
             this.dimensions = dimensions;
             this.spriteBatch = spriteBatch;

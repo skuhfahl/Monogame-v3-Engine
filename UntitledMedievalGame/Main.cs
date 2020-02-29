@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using UntitledMedievalGame.Engine;
+using UntitledMedievalGame.Engine.Services;
 
 namespace UntitledMedievalGame
 {
@@ -32,9 +34,8 @@ namespace UntitledMedievalGame
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
             base.Initialize();
+
         }
 
         /// <summary>
@@ -44,10 +45,12 @@ namespace UntitledMedievalGame
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
+            GameServices.AddService(Content);
+
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            world = new World(this.Content, spriteBatch);
+            world = new World(spriteBatch);
         }
 
         /// <summary>

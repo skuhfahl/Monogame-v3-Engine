@@ -10,9 +10,9 @@ namespace UntitledMedievalGame.Engine
     {
         private Entity player;
 
-        public World(ContentManager content, SpriteBatch spriteBatch)
+        public World(SpriteBatch spriteBatch)
         {
-            player = new Entity(content, spriteBatch, "PlayerPlaceholder", new Vector2(50, 50), new Vector2(20, 30));
+            player = new Entity(spriteBatch, "PlayerPlaceholder", new Vector2(50, 50), new Vector2(20, 30));
         }
 
         public virtual void Update()

@@ -2,6 +2,11 @@
 
 namespace UntitledMedievalGame.Engine.Services
 {
+    // To do - Evaluate whether this class is needed. 
+    // Other alternatives:
+    // 1. Passing dependencies in through constructor
+    // 2. Utilizing Game.Services to store dependencies and passing in through constructor
+
     public static class GameServices
     {
         private static GameServiceContainer container;

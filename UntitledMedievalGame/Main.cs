@@ -15,8 +15,6 @@ namespace UntitledMedievalGame
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
         private InputHelper inputHelper;
-        private Texture2D texture;
-        private Vector2 texturePosition;
         World world;
 
         public Main()
@@ -35,7 +33,6 @@ namespace UntitledMedievalGame
         protected override void Initialize()
         {
             base.Initialize();
-
         }
 
         /// <summary>

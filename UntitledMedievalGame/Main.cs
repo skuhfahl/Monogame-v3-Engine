@@ -48,8 +48,7 @@ namespace UntitledMedievalGame
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // Add Services to Service Provider
-            GameServices.AddService<ContentManager>(Content);
-            GameServices.AddService<SpriteBatch>(spriteBatch);
+            RegisterServices();
 
             // TODO: use this.Content to load your game content here
             world = new World();
@@ -100,6 +99,15 @@ namespace UntitledMedievalGame
             spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+
+        /// <summary>
+        /// This function registers any services that you may need easy access to.
+        /// </summary>
+        private void RegisterServices()
+        {
+            GameServices.AddService<ContentManager>(Content);
+            GameServices.AddService<SpriteBatch>(spriteBatch);
         }
     }
 }

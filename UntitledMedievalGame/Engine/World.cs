@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using UntitledMedievalGame.Engine;
+using UntitledMedievalGame.Engine.Services;
 
 namespace UntitledMedievalGame.Engine
 {
@@ -10,9 +11,9 @@ namespace UntitledMedievalGame.Engine
     {
         private Entity player;
 
-        public World(SpriteBatch spriteBatch)
+        public World()
         {
-            player = new Entity(spriteBatch, "PlayerPlaceholder", new Vector2(50, 50), new Vector2(20, 30));
+            player = new Entity("PlayerPlaceholder", new Vector2(50, 50), new Vector2(20, 30));
         }
 
         public virtual void Update()

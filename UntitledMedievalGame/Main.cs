@@ -45,12 +45,14 @@ namespace UntitledMedievalGame
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            GameServices.AddService(Content);
-
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            // Add Services to Service Provider
+            GameServices.AddService<ContentManager>(Content);
+            GameServices.AddService<SpriteBatch>(spriteBatch);
+
             // TODO: use this.Content to load your game content here
-            world = new World(spriteBatch);
+            world = new World();
         }
 
         /// <summary>

@@ -14,20 +14,19 @@ namespace UntitledMedievalGame.Engine
     class Entity
     {
         ContentManager contentManager = GameServices.GetService<ContentManager>();
+        SpriteBatch spriteBatch = GameServices.GetService<SpriteBatch>();
 
         private Vector2 position;
         private Vector2 dimensions;
         private Texture2D texture;
 
-        private SpriteBatch spriteBatch;
         private SpriteEffects spriteEffects;
 
-        public Entity(SpriteBatch spriteBatch, string texturePath, Vector2 position, Vector2 dimensions)
+        public Entity(string texturePath, Vector2 position, Vector2 dimensions)
         {
             this.texture = contentManager.Load<Texture2D>(texturePath);
             this.position = position;
             this.dimensions = dimensions;
-            this.spriteBatch = spriteBatch;
 
         }
 

@@ -43,7 +43,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Engine\Components\InputComponent.cs" />
-    <Compile Include="Engine\Entity.cs" />
+    <Compile Include="Engine\Entities\Entity.cs" />
     <Compile Include="Engine\InputHelper.cs" />
     <Compile Include="Engine\Services\GameServices.cs" />
     <Compile Include="Engine\World.cs" />

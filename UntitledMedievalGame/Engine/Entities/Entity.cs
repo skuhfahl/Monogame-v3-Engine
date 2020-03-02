@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Input;
 using System;
 using UntitledMedievalGame.Engine;
 using UntitledMedievalGame.Engine.Components;
+using UntitledMedievalGame.Engine.Entities;
 using UntitledMedievalGame.Engine.Services;
 
 namespace UntitledMedievalGame.Engine
@@ -14,26 +15,19 @@ namespace UntitledMedievalGame.Engine
     /// </summary>
     class Entity
     {
-        //Services
-        private ContentManager contentManager = GameServices.GetService<ContentManager>();
-        private SpriteBatch spriteBatch = GameServices.GetService<SpriteBatch>();
-
         //Components
         private InputComponent inputComponent = new InputComponent();
+        private GraphicsComponent graphicsComponent = new GraphicsComponent();
 
         //Public Fields
+        public EntityType type;
         public Vector2 position;
+        public Vector2 dimensions;
         public int movementSpeed = 1;
 
-        //Private Fields
-        private Vector2 dimensions;
-        private Texture2D texture;
-
-        private SpriteEffects spriteEffects;
-
-        public Entity(string texturePath, Vector2 position, Vector2 dimensions)
+        public Entity(EntityType type, Vector2 position, Vector2 dimensions)
         {
-            this.texture = contentManager.Load<Texture2D>(texturePath);
+            this.type = type;
             this.position = position;
             this.dimensions = dimensions;
         }
@@ -41,11 +35,12 @@ namespace UntitledMedievalGame.Engine
         public virtual void Update()
         {
             inputComponent.Update(this);
+            graphicsComponent.Update(this);
         }
 
         public virtual void Draw()
         {
-            spriteBatch.Draw(texture, new Rectangle((int)position.X, (int)position.Y, (int)dimensions.X, (int)dimensions.Y), null, Color.White, 0.0f, new Vector2(texture.Bounds.Width / 2, texture.Bounds.Height / 2), spriteEffects, 0.0f);
+            graphicsComponent.Draw(this);
         }
     }
 }

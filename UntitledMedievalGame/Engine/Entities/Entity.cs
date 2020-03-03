@@ -3,6 +3,8 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UntitledMedievalGame.Engine;
 using UntitledMedievalGame.Engine.Components;
 using UntitledMedievalGame.Engine.Entities;
@@ -16,6 +18,7 @@ namespace UntitledMedievalGame.Engine
     class Entity : IEntity
     {
         //Components
+        private List<IComponent> components;
         private InputComponent inputComponent = new InputComponent();
         private GraphicsComponent graphicsComponent = new GraphicsComponent();
 
@@ -30,6 +33,35 @@ namespace UntitledMedievalGame.Engine
             this.type = type;
             this.position = position;
             this.dimensions = dimensions;
+            this.components = new List<IComponent>();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="component"> The Component to add to this Entity. </param>
+        public void AddComponent(IComponent component)
+        {
+            this.components.Add(component);
+        }
+
+        /// <summary>
+        /// Retrieves the component of the desired type. 
+        /// </summary>
+        /// <typeparam name="T"> The type of Component to retrieve. </typeparam>
+        /// <returns> The Component of type T </returns>
+        public IComponent GetComponent<T>() where T : IComponent
+        {
+            return this.components.Where(c => c.GetType() == typeof(T)).First();
+        }
+
+        /// <summary>
+        /// Remove all Components of type T from the Entity.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        public void RemoveComponent<T>() where T : IComponent
+        {
+            this.components.RemoveAll(c => c.GetType() == typeof(T));
         }
 
         public virtual void Update()

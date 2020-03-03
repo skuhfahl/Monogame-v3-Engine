@@ -9,7 +9,7 @@ namespace UntitledMedievalGame.Engine.Components
     /// <summary>
     /// This component is responsible for rendering a sprite.
     /// </summary>
-    class GraphicsComponent
+    class GraphicsComponent : IComponent
     {
         //Services
         private ContentManager contentManager = GameServices.GetService<ContentManager>();

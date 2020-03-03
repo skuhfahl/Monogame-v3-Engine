@@ -5,7 +5,7 @@ namespace UntitledMedievalGame.Engine.Components
     /// <summary>
     /// InputComponent checks for any mouse & keyboard input and updates Entity accordingly.
     /// </summary>
-    class InputComponent
+    class InputComponent : IComponent
     {
         private InputHelper inputHelper;
 

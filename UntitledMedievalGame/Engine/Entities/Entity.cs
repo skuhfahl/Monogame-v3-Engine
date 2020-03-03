@@ -13,7 +13,7 @@ namespace UntitledMedievalGame.Engine
     /// <summary>
     /// The base object that will be drawn to the screen
     /// </summary>
-    class Entity
+    class Entity : IEntity
     {
         //Components
         private InputComponent inputComponent = new InputComponent();

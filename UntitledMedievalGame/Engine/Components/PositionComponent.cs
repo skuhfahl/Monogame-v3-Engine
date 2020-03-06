@@ -6,7 +6,7 @@ namespace UntitledMedievalGame.Engine.Components
     /// Responsible for holding a Coordinate Vector2 (X, Y), Dimensions Vector2 (X, Y),
     /// and a Rotation float.
     /// </summary>
-    class PositionComponent
+    class PositionComponent : IComponent
     {
         public Vector2 Position { get; set; }
         public Vector2 Dimensions { get; set; }

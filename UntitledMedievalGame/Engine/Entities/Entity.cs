@@ -50,9 +50,9 @@ namespace UntitledMedievalGame.Engine
         /// </summary>
         /// <typeparam name="T"> The type of Component to retrieve. </typeparam>
         /// <returns> The Component of type T </returns>
-        public IComponent GetComponent<T>() where T : IComponent
+        public T GetComponent<T>() where T : IComponent
         {
-            return this.components.Where(c => c.GetType() == typeof(T)).First();
+            return (T)this.components.Where(c => c.GetType() == typeof(T)).First();
         }
 
         /// <summary>

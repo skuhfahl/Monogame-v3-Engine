@@ -45,6 +45,8 @@
     <Compile Include="Engine\Components\GraphicsComponent.cs" />
     <Compile Include="Engine\Components\IComponent.cs" />
     <Compile Include="Engine\Components\InputComponent.cs" />
+    <Compile Include="Engine\Components\PhysicsComponent.cs" />
+    <Compile Include="Engine\Components\PositionComponent.cs" />
     <Compile Include="Engine\Entities\Entity.cs" />
     <Compile Include="Engine\Entities\EntityType.cs" />
     <Compile Include="Engine\Entities\IEntity.cs" />

@@ -7,6 +7,13 @@ namespace UntitledMedievalGame.Engine.Components
     /// </summary>
     class PhysicsComponent : IComponent
     {
-        public Vector2 Velocity;
+        public int MovementSpeed { get; set; }
+        public Vector2 Velocity { get; set; }
+
+        public PhysicsComponent(int movementSpeed, Vector2 velocity)
+        {
+            this.MovementSpeed = movementSpeed;
+            this.Velocity = velocity;
+        }
     }
 }

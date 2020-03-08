@@ -11,5 +11,12 @@ namespace UntitledMedievalGame.Engine.Components
         public Vector2 Position { get; set; }
         public Vector2 Dimensions { get; set; }
         public float Rotation { get; set; }
+
+        public PositionComponent(Vector2 position, Vector2 dimensions, float rotation)
+        {
+            this.Position = position;
+            this.Dimensions = dimensions;
+            this.Rotation = rotation;
+        }
     }
 }

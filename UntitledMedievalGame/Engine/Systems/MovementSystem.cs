@@ -27,7 +27,6 @@ namespace UntitledMedievalGame.Engine.Systems
                     SetPosition(positionComponent, physicsComponent);
                 }
             }
-
         }
 
         private void SetPosition(PositionComponent positionComponent, PhysicsComponent physicsComponent)

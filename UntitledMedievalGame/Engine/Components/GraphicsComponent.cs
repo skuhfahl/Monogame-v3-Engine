@@ -1,8 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
-using UntitledMedievalGame.Engine.Entities;
-using UntitledMedievalGame.Engine.Services;
+﻿using Microsoft.Xna.Framework.Graphics;
 
 namespace UntitledMedievalGame.Engine.Components
 {

@@ -1,7 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Input;
-
-namespace UntitledMedievalGame.Engine.Components
+﻿namespace UntitledMedievalGame.Engine.Components
 {
     /// <summary>
     /// InputComponent checks for any mouse & keyboard input and updates Entity accordingly.

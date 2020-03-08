@@ -1,5 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UntitledMedievalGame.Engine.Components;
 using UntitledMedievalGame.Engine.Entities;
@@ -17,6 +16,7 @@ namespace UntitledMedievalGame.Engine
         public Entity(EntityType type)
         {
             this.type = type;
+            this.components = new List<IComponent>();
         }
 
         /// <summary>
@@ -35,7 +35,9 @@ namespace UntitledMedievalGame.Engine
         /// <returns> The Component of type T </returns>
         public T GetComponent<T>() where T : IComponent
         {
-            return (T)this.components.Where(c => c.GetType() == typeof(T)).First();
+            //Need to handle the case where the component is null or does not exist.
+
+            return (T)this.components.Where(c => c.GetType() == typeof(T)).FirstOrDefault();
         }
 
         /// <summary>

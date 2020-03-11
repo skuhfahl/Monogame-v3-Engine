@@ -14,6 +14,8 @@ namespace UntitledMedievalGame.Engine.Systems
             this.entities = entities;
         }
 
+        // Should the List<Entity> be passed in the update function to ensure it is always up to date?
+        // Same question applies to the rest of the Systems
         public void Update()
         {
             foreach(Entity e in entities)

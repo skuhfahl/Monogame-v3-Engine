@@ -25,6 +25,7 @@ namespace UntitledMedievalGame.Engine.Systems
                 if (positionComponent != null && physicsComponent != null)
                 {
                     SetPosition(positionComponent, physicsComponent);
+                    ClearVelocity(physicsComponent);
                 }
             }
         }
@@ -35,6 +36,11 @@ namespace UntitledMedievalGame.Engine.Systems
             float newY = positionComponent.Position.Y + physicsComponent.Velocity.Y;
 
             positionComponent.Position = new Vector2(newX, newY);
+        }
+
+        private void ClearVelocity(PhysicsComponent physicsComponent)
+        {
+            physicsComponent.Velocity = new Vector2(0.0f, 0.0f);
         }
     }
 }

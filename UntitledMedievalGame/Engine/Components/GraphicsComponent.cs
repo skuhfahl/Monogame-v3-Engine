@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
+using UntitledMedievalGame.Engine.Services;
 
 namespace UntitledMedievalGame.Engine.Components
 {
@@ -7,12 +9,19 @@ namespace UntitledMedievalGame.Engine.Components
     /// </summary>
     class GraphicsComponent : IComponent
     {
+        private ContentManager contentManager = GameServices.GetService<ContentManager>();
+
         public Texture2D sprite;
         public SpriteEffects spriteEffects;
 
-        public GraphicsComponent()
+        public GraphicsComponent(string spritePath)
         {
+            this.sprite = LoadSprite(spritePath);
+        }
 
+        private Texture2D LoadSprite(string path)
+        {
+            return contentManager.Load<Texture2D>(path);
         }
     }
 }

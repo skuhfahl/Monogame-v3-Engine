@@ -1,9 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using UntitledMedievalGame.Engine.Components;
-using UntitledMedievalGame.Engine.Entities;
 using UntitledMedievalGame.Engine.Services;
 
 namespace UntitledMedievalGame.Engine.Systems
@@ -11,7 +9,6 @@ namespace UntitledMedievalGame.Engine.Systems
     class RenderingSystem
     {
         //Services
-        private ContentManager contentManager = GameServices.GetService<ContentManager>();
         private SpriteBatch spriteBatch = GameServices.GetService<SpriteBatch>();
         
         List<Entity> entities;
@@ -30,8 +27,6 @@ namespace UntitledMedievalGame.Engine.Systems
 
                 if (gc != null && pc != null)
                 {
-                    string spritePath = GetSpritePath(e.type);
-                    gc.sprite = contentManager.Load<Texture2D>(spritePath);
                     spriteBatch.Draw(
                         gc.sprite, 
                         new Rectangle((int)pc.Position.X, (int)pc.Position.Y, (int)pc.Dimensions.X, (int)pc.Dimensions.Y), 
@@ -43,28 +38,5 @@ namespace UntitledMedievalGame.Engine.Systems
                 }
             }
         }
-
-        private string GetSpritePath(EntityType type)
-        {
-            // This should probably be removed in favor of passing the path in GraphicsComponent Constructor
-
-            string spritePath;
-
-            switch (type)
-            {
-                case EntityType.PlayerPlaceholder:
-                    spritePath = "PlayerPlaceholder";
-                    break;
-                case EntityType.Rat:
-                    spritePath = "Rat";
-                    break;
-                default:
-                    spritePath = "TextureError";
-                    break;
-            }
-
-            return spritePath;
-        }
-
     }
 }

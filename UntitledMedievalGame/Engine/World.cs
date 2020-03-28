@@ -19,14 +19,14 @@ namespace UntitledMedievalGame.Engine
             Entity player = new Entity(EntityType.PlayerPlaceholder);
             player.AddComponent(new PositionComponent(new Vector2(50, 50), new Vector2(20, 30), 0.0f));
             player.AddComponent(new PhysicsComponent(1, new Vector2(0, 0)));
-            player.AddComponent(new GraphicsComponent());
+            player.AddComponent(new GraphicsComponent("PlayerPlaceholder"));
             player.AddComponent(new InputComponent());
             entities.Add(player);
 
             // Create Rat
             Entity rat = new Entity(EntityType.Rat);
             rat.AddComponent(new PositionComponent(new Vector2(100, 50), new Vector2(30, 20), 0.0f));
-            rat.AddComponent(new GraphicsComponent());
+            rat.AddComponent(new GraphicsComponent("Rat"));
             entities.Add(rat);
 
             playerControllerSystem = new PlayerControllerSystem(entities);

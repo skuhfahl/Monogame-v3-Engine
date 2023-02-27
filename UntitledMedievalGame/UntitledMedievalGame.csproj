@@ -52,6 +52,7 @@
     <Compile Include="Engine\Entities\IEntity.cs" />
     <Compile Include="Engine\InputHelper.cs" />
     <Compile Include="Engine\Services\GameServices.cs" />
+    <Compile Include="Engine\Systems\CollisionSystem.cs" />
     <Compile Include="Engine\Systems\MovementSystem.cs" />
     <Compile Include="Engine\Systems\PlayerControllerSystem.cs" />
     <Compile Include="Engine\Systems\RenderingSystem.cs" />

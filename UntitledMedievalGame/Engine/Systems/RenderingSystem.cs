@@ -1,10 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
-using UntitledMedievalGame.Engine.Components;
-using UntitledMedievalGame.Engine.Services;
+using UntitledGame.Engine.Components;
+using UntitledGame.Engine.Services;
 
-namespace UntitledMedievalGame.Engine.Systems
+namespace UntitledGame.Engine.Systems
 {
     class RenderingSystem
     {

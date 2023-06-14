@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace UntitledMedievalGame.Engine.Services
+namespace UntitledGame.Engine.Services
 {
     // To do - Evaluate whether this class is needed. 
     // Other alternatives:

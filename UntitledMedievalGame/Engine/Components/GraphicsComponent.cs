@@ -1,9 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using UntitledMedievalGame.Engine.Services;
+using UntitledGame.Engine.Services;
 
-namespace UntitledMedievalGame.Engine.Components
+namespace UntitledGame.Engine.Components
 {
     /// <summary>
     /// This component is responsible for rendering a sprite.

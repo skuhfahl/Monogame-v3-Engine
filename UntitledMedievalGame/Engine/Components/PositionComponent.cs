@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace UntitledMedievalGame.Engine.Components
+namespace UntitledGame.Engine.Components
 {
     /// <summary>
     /// Responsible for holding a Coordinate Vector2 (X, Y), Dimensions Vector2 (X, Y),

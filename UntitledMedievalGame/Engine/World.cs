@@ -1,10 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using System.Collections.Generic;
-using UntitledMedievalGame.Engine.Components;
-using UntitledMedievalGame.Engine.Entities;
-using UntitledMedievalGame.Engine.Systems;
+using UntitledGame.Engine.Components;
+using UntitledGame.Engine.Entities;
+using UntitledGame.Engine.Systems;
 
-namespace UntitledMedievalGame.Engine
+namespace UntitledGame.Engine
 {
     class World
     {

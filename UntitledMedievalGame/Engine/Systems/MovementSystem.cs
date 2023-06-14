@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using System.Collections.Generic;
-using UntitledMedievalGame.Engine.Components;
+using UntitledGame.Engine.Components;
 
-namespace UntitledMedievalGame.Engine.Systems
+namespace UntitledGame.Engine.Systems
 {
     // The Movement System is responsible for taking the forces in the Physics
     // Component and updating the Position Component accordingly. 

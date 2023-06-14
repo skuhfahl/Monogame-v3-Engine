@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using System.Collections.Generic;
-using UntitledMedievalGame.Engine.Components;
+using UntitledGame.Engine.Components;
 
-namespace UntitledMedievalGame.Engine.Systems
+namespace UntitledGame.Engine.Systems
 {
     class CollisionSystem
     {

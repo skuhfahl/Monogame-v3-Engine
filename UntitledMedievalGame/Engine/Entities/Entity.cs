@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using UntitledMedievalGame.Engine.Components;
-using UntitledMedievalGame.Engine.Entities;
+using UntitledGame.Engine.Components;
+using UntitledGame.Engine.Entities;
 
-namespace UntitledMedievalGame.Engine
+namespace UntitledGame.Engine
 {
     /// <summary>
     /// The base object that will be drawn to the screen

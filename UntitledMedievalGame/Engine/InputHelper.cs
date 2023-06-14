@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace UntitledMedievalGame.Engine
+namespace UntitledGame.Engine
 {
     public enum MouseButtons
     {

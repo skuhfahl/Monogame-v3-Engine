@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UntitledMedievalGame
+namespace UntitledGame
 {
 #if WINDOWS || LINUX
     /// <summary>

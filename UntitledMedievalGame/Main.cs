@@ -2,10 +2,10 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using UntitledMedievalGame.Engine;
-using UntitledMedievalGame.Engine.Services;
+using UntitledGame.Engine;
+using UntitledGame.Engine.Services;
 
-namespace UntitledMedievalGame
+namespace UntitledGame
 {
     /// <summary>
     /// This is the main type for your game.

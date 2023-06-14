@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UntitledMedievalGame.Engine.Components
+namespace UntitledGame.Engine.Components
 {
     interface IComponent
     {

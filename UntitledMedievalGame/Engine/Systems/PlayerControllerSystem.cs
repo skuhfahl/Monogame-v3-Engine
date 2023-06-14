@@ -1,9 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
-using UntitledMedievalGame.Engine.Components;
+using UntitledGame.Engine.Components;
 
-namespace UntitledMedievalGame.Engine.Systems
+namespace UntitledGame.Engine.Systems
 {
     class PlayerControllerSystem
     {
